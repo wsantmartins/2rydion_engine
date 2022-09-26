@@ -41,12 +41,12 @@ xlabel('$x$', 'Interpreter','latex')
 ylabel('$p$', 'Interpreter','latex')
 
 figure(4)
-data_line4 = plot(t, x2 + p2,'LineWidth', 1);
+data_line4 = plot(t, 0.5*5.0*sqrt(3)*(x2 + p2),'LineWidth', 1);
 set(gca, 'FontSize', 24, 'FontName','Times') %label fontsize and name
 xlabel('$\gamma t$', 'Interpreter','latex')
 ylabel('$U_t/\gamma$', 'Interpreter','latex')
 %set the axis limits
-axis([0 domain -2 2])
+axis([0 domain -0.2 5])
 
 figure(5)
 data_line5 = plot(t, w,'LineWidth', 1);
@@ -54,4 +54,4 @@ set(gca, 'FontSize', 24, 'FontName','Times') %label fontsize and name
 xlabel('$\gamma t$', 'Interpreter','latex')
 ylabel('$\mathcal{W}/\gamma$', 'Interpreter','latex')
 %set the axis limits
-axis([0 domain -1 2])
+axis([0 domain -0.2 5])

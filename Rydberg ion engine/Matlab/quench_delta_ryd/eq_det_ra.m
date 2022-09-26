@@ -43,11 +43,11 @@ nr = 0.5 + sz./2.0;
 
 dydt(1,:) = (c*omega.*p)./gamma;
 dydt(2,:) = (c*omega.*xp_px)./gamma; 
-dydt(3,:) = (-c*omega.*x + k1.*nr.^2.0 - 2.0*k2.*x.*nr.^2.0)./gamma;
+dydt(3,:) = (-c*omega.*x + sqrt(2)*k1.*nr.^2.0 - 4.0*k2.*x.*nr.^2.0)./gamma;
 dydt(4,:) = (-c*omega.*xp_px + sqrt(8.0)*k1.*p.*nr.^2 - 4.0*k2.*xp_px.*nr.^2.0)./gamma;
-dydt(5,:) = (2.0*(-c*omega.*(x2 - p2) + k1.*x.*nr.^2 - 4.0*k2.*x2.*nr.^2))./gamma; 
+dydt(5,:) = (2.0*(-c*omega.*(x2 - p2) + sqrt(2.0)*k1.*x.*nr.^2 - 4.0*k2.*x2.*nr.^2))./gamma; 
 dydt(6,:) = (-(k0 - sqrt(2.0)*k1.*x + 2.0*k2.*x2).*sy.*nr - delta.*sy -0.5*gamma.*sx)./gamma;
-dydt(7,:) = ((k0 - sqrt(2.0)*k1.*x + 2.0*k2.*x2).*sx.*nr - 2.0*big_omega.*sz + delta.*sx - 0.5*gamma.*sy)./gamma;
-dydt(8,:) = (2.0*big_omega.*sy - 2.0*gamma.*nr)./gamma;
+dydt(7,:) = ((k0 - sqrt(2.0)*k1.*x + 2.0*k2.*x2).*sx.*nr - 2.0.*big_omega.*sz + delta.*sx - 0.5*gamma.*sy)./gamma;
+dydt(8,:) = (2.0.*big_omega.*sy - 2.0*gamma.*nr)./gamma;
 
 end

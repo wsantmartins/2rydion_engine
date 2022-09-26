@@ -1,10 +1,10 @@
 tic 
 
 %parameters for the integration
-npts = 1000;
+npts = 10000000;
 opts = odeset('RelTol', 1e-11, 'AbsTol', 1e-11);
-y0 = [1 1 0 0 0 0 1 -1];
-domain = 10000;
+y0 = [0 0 0 0 0 0 1 -1];
+domain = 20000;
 tspan = linspace(0, domain, npts);
 omega = 1.0;
 
