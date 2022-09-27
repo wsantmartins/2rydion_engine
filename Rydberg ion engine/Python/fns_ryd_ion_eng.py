@@ -45,11 +45,11 @@ sz1_exp = result.expect[6]
 plt.plot(tspan, sy1_exp)
 plt.show()
 
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\x_op', np.c_[tspan, x_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\x2_op', np.c_[tspan, x2_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\p_op', np.c_[tspan, p_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\p2_op', np.c_[tspan, p2_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\sx_op', np.c_[tspan, sx1_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\sy_op', np.c_[tspan, sy1_exp])
-np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\sz_op', np.c_[tspan, sz1_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\x_op', np.c_[tspan, x_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\x2_op', np.c_[tspan, x2_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\p_op', np.c_[tspan, p_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\p2_op', np.c_[tspan, p2_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\sx_op', np.c_[tspan, sx1_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\sy_op', np.c_[tspan, sy1_exp])
+np.savetxt('C:\\Users\\admin\\Dropbox\\Academia\\PhD\\Codes\\Rydberg ion engine\\Python\\data\\sz_op', np.c_[tspan, sz1_exp])
 

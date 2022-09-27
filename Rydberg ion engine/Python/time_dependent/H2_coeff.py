@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 def H2_coeff(t, args):
 
-    a_max = args['max_value']
-    a_min = args['min_value']
-    T = args['period']
+    a_max = args['max_value2']
+    a_min = args['min_value2']
+    T = args['period2']
 
     #angular coefficient 
     ang = 4.0*(a_max - a_min)/T
@@ -15,12 +15,12 @@ def H2_coeff(t, args):
     lin2 = 4.0*a_max - 3.0*a_min
 
     a1 = lambda t: a_min
-    a2 = lambda t: ang*(t % T)  - lin1
+    a2 = lambda t: ang*((t + np.pi/2) % T)  - lin1
     a3 = lambda t: a_max
-    a4 = lambda t: lin2 - ang*(t % T)
+    a4 = lambda t: lin2 - ang*((t + np.pi/2) % T)
 
-    return np.piecewise(t, [(0.0 <= t % T)*(t % T < T/4.0),
-    (T/4.0 <= t % T)*(t % T < T/2.0),
-    (T/2.0 <= t % T)*(t % T < 3.0*T/4.0),
-    (3.0*T/4.0 <= t % T)*(t % T < T)],
+    return np.piecewise(t, [(0.0 <= (t + np.pi/2) % T)*((t + np.pi/2) % T < T/4.0),
+    (T/4.0 <= (t + np.pi/2) % T)*((t + np.pi/2) % T < T/2.0),
+    (T/2.0 <= (t + np.pi/2) % T)*((t + np.pi/2) % T < 3.0*T/4.0),
+    (3.0*T/4.0 <= (t + np.pi/2) % T)*((t + np.pi/2) % T < T)],
     [a1, a2, a3, a4]) 
